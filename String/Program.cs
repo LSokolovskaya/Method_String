@@ -2,31 +2,71 @@
 {
     static void Main(string[] args)
     {
-        // Task1()
+        // Task1();
+        Task2();
     }
     #region Задача1
     // 1. Ввести строку. Если эта равна “hschool”, вывести true. В противном случае false. Добавить проверки для строк. Удалить лишние пробелы
-    static void Task1(string? text)
+    static void Task1()
     {
-        text = Console.ReadLine();
-        System.Console.WriteLine(MethodHschool(text));
+        string text = Console.ReadLine();
+        if (!string.IsNullOrEmpty(text))
+        {
+            if (text is string)
+            {
+                text = text.Trim();
+                System.Console.WriteLine($"{text} = {MethodHschool(text)}");
+            }
+        }
     }
     static bool MethodHschool(string text)
     {
-        if (text == "hschool")
+        if (text != "hschool")
         {
-            return true;
+            return false;
         }
         else
         {
-            return false;
+            return true;
         }
 
     }
     #endregion
+    #region Задача2
+    // 2. Ввести строку. Проверить является ли это число или строка. Если число, то выяснить, четное или нет. Если это строка то преобразовать строку в массив, где каждый символ – один элемент массива
+    // ‘hschool’ => [‘h’, ‘s’, ‘c’, ‘h’, ‘o’, ‘o’, ‘l’]
+    static void Task2()
+    {
+        string? text = Console.ReadLine();
+        if (!string.IsNullOrEmpty(text))
+        {
+            if (!int.TryParse(text, out int number))
+            {
+                text = Convert.ToString(text.Split());
+                System.Console.WriteLine(string.Join(", ", text));
+            }
+            else
+            {
+                System.Console.WriteLine(MethodChetnoe(number));
+            }
+        }
+
+    }
+    static string MethodChetnoe(int number)
+    {
+        if (number % 2 != 0)
+        {
+            return "Нечетное";
+        }
+        else
+        {
+            return "Четное";
+        }
+    }
+    #endregion
+    #region Задача3
+    #endregion
 }
-// 2. Ввести строку. Проверить является ли это число или строка. Если число, то выяснить, четное или нет. Если это строка то преобразовать строку в массив, где каждый символ – один элемент массива
-// ‘hschool’ => [‘h’, ‘s’, ‘c’, ‘h’, ‘o’, ‘o’, ‘l’]
 // 3. Преобразовать строку ‘Full сStaCK DevELoper’ в массив вида [‘full, ‘stack’, ‘developer’]
 // 4. Ввести строку. Проверить на isNaN. Если число, то ошибка ввода. Если это строка то узнать какая у нее длина. Привести к одному регистру, убрать лишние пробелы
 // 5. ‘HTML JavaScript PHP’ преобразовать в "HTML-JAVASCRIPT-PHP"

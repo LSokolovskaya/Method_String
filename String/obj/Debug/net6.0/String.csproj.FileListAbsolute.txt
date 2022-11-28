@@ -1,0 +1,15 @@
+/Users/liubasokolovskaya/Desktop/Method_String/String/bin/Debug/net6.0/String
+/Users/liubasokolovskaya/Desktop/Method_String/String/bin/Debug/net6.0/String.deps.json
+/Users/liubasokolovskaya/Desktop/Method_String/String/bin/Debug/net6.0/String.runtimeconfig.json
+/Users/liubasokolovskaya/Desktop/Method_String/String/bin/Debug/net6.0/String.dll
+/Users/liubasokolovskaya/Desktop/Method_String/String/bin/Debug/net6.0/String.pdb
+/Users/liubasokolovskaya/Desktop/Method_String/String/obj/Debug/net6.0/String.csproj.AssemblyReference.cache
+/Users/liubasokolovskaya/Desktop/Method_String/String/obj/Debug/net6.0/String.GeneratedMSBuildEditorConfig.editorconfig
+/Users/liubasokolovskaya/Desktop/Method_String/String/obj/Debug/net6.0/String.AssemblyInfoInputs.cache
+/Users/liubasokolovskaya/Desktop/Method_String/String/obj/Debug/net6.0/String.AssemblyInfo.cs
+/Users/liubasokolovskaya/Desktop/Method_String/String/obj/Debug/net6.0/String.csproj.CoreCompileInputs.cache
+/Users/liubasokolovskaya/Desktop/Method_String/String/obj/Debug/net6.0/String.dll
+/Users/liubasokolovskaya/Desktop/Method_String/String/obj/Debug/net6.0/refint/String.dll
+/Users/liubasokolovskaya/Desktop/Method_String/String/obj/Debug/net6.0/String.pdb
+/Users/liubasokolovskaya/Desktop/Method_String/String/obj/Debug/net6.0/String.genruntimeconfig.cache
+/Users/liubasokolovskaya/Desktop/Method_String/String/obj/Debug/net6.0/ref/String.dll
