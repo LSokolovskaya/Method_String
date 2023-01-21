@@ -37,31 +37,24 @@
     // ‘hschool’ => [‘h’, ‘s’, ‘c’, ‘h’, ‘o’, ‘o’, ‘l’]
     static void Task2()
     {
+        System.Console.WriteLine("Введите строку");
         string? text = Console.ReadLine();
-        if (!string.IsNullOrEmpty(text))
+        if (int.TryParse(text, out int number))
         {
-            if (!int.TryParse(text, out int number))
-            {
-                text = Convert.ToString(text.Split());
-                System.Console.WriteLine(string.Join(", ", text));
-            }
-            else
-            {
-                System.Console.WriteLine(MethodChetnoe(number));
-            }
+            System.Console.WriteLine(MethodChetnoe(number));
         }
-
+        if (MethodHschool(text))
+        {
+            string[] textArray = text.Split("");
+            text = string.Join(",", textArray);
+            text = text.TrimEnd(',');
+            System.Console.WriteLine(text);
+        }
     }
     static string MethodChetnoe(int number)
     {
-        if (number % 2 != 0)
-        {
-            return "Нечетное";
-        }
-        else
-        {
-            return "Четное";
-        }
+        string result = number % 2 == 0 ? "Число четное" : "Число нечетное";
+        return result;
     }
     #endregion
     #region Задача3
