@@ -3,7 +3,14 @@
     static void Main(string[] args)
     {
         // Task1();
-        Task2();
+        // Task2();
+        Task3();
+        // Task4();
+        // Task5();
+        // Task6();
+        // Task7();
+        // Task8();
+        // Task9();
     }
     #region Задача1
     // 1. Ввести строку. Если эта равна “hschool”, вывести true. В противном случае false. Добавить проверки для строк. Удалить лишние пробелы
@@ -29,7 +36,6 @@
         {
             return true;
         }
-
     }
     #endregion
     #region Задача2
@@ -39,16 +45,14 @@
     {
         System.Console.WriteLine("Введите строку");
         string? text = Console.ReadLine();
-        if (int.TryParse(text, out int number))
-        {
-            System.Console.WriteLine(MethodChetnoe(number));
-        }
         if (MethodHschool(text))
         {
-            string[] textArray = text.Split("");
-            text = string.Join(",", textArray);
-            text = text.TrimEnd(',');
-            System.Console.WriteLine(text);
+            char[] textArray = text.ToCharArray();
+            System.Console.WriteLine(string.Join(", ", textArray).TrimEnd(','));
+        }
+        else if (int.TryParse(text, out int number))
+        {
+            System.Console.WriteLine(MethodChetnoe(number));
         }
     }
     static string MethodChetnoe(int number)
@@ -58,9 +62,20 @@
     }
     #endregion
     #region Задача3
+    static void Task3()
+    {
+
+    }
+    // 3. Преобразовать строку ‘Full сStaCK DevELoper’ в массив вида [‘full, ‘stack’, ‘developer’]
+
+    #endregion
+    #region Задача4
+    #endregion
+    #region Задача5
+    #endregion
+    #region Задача6
     #endregion
 }
-// 3. Преобразовать строку ‘Full сStaCK DevELoper’ в массив вида [‘full, ‘stack’, ‘developer’]
 // 4. Ввести строку. Проверить на isNaN. Если число, то ошибка ввода. Если это строка то узнать какая у нее длина. Привести к одному регистру, убрать лишние пробелы
 // 5. ‘HTML JavaScript PHP’ преобразовать в "HTML-JAVASCRIPT-PHP"
 // 6. Ввести строку. Проверить является ли это число или строка. Если число, то
