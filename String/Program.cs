@@ -5,9 +5,9 @@
         // Task1();
         // Task2();
         // Task3();
-        Task4();
+        // Task4();
         // Task5();
-        // Task6();
+        Task6();
         // Task7();
         // Task8();
         // Task9();
@@ -16,7 +16,7 @@
     // 1. Ввести строку. Если эта равна “hschool”, вывести true. В противном случае false. Добавить проверки для строк. Удалить лишние пробелы
     static void Task1()
     {
-        string text = Console.ReadLine();
+        string? text = Console.ReadLine();
         if (!string.IsNullOrEmpty(text))
         {
             if (text is string)
@@ -88,11 +88,15 @@
     {
         System.Console.WriteLine("Введите текст");
         string? text = Console.ReadLine();
-        if (string.IsNullOrEmpty(text))
+        if (!string.IsNullOrEmpty(text))
         {
             text = text.ToLower();
             text = text.Trim();
             System.Console.WriteLine(MethodTextOrNumber(text));
+        }
+        else
+        {
+            System.Console.WriteLine("Empty");
         }
     }
     static object MethodTextOrNumber(string text)
@@ -102,7 +106,7 @@
         {
             result = "Ошибка ввода";
         }
-        else if (text is String)
+        else
         {
             result = text.Length;
         }
@@ -111,14 +115,48 @@
 
     #endregion
     #region Задача5
+    // 5. ‘HTML JavaScript PHP’ преобразовать в "HTML-JAVASCRIPT-PHP"
+    static void Task5()
+    {
+        string text = "HTML JavaScript PHP";
+        System.Console.WriteLine(MethodToUpper(text));
+    }
+    static string MethodToUpper(string text)
+    {
+        return text.ToUpper().Replace(' ', '-');
+    }
     #endregion
     #region Задача6
+    // 6. Ввести строку. Проверить является ли это число или строка. Если число, то
+    // ошибка ввода. Если это строка то первый символ поставить в верхний регистр.
+    // Убрать лишние пробелы
+    static void Task6()
+    {
+        System.Console.WriteLine("Введите строку");
+        string? text = Console.ReadLine();
+        System.Console.WriteLine(MethodLetter(text));
+    }
+    static object MethodLetter(string text)
+    {
+        object result = 0;
+        if (int.TryParse(text, out int number))
+        {
+            result = "Ошибка ввода";
+        }
+        else
+        {
+            string[] array = text.Split("");
+            for (int i = 0; i < array.Length; i++)
+            {
+                array[1].ToUpper();
+                result = string.Join("", array);
+            }
+        }
+        return Convert.ToString(result).Trim();
+    }
     #endregion
 }
-// 5. ‘HTML JavaScript PHP’ преобразовать в "HTML-JAVASCRIPT-PHP"
-// 6. Ввести строку. Проверить является ли это число или строка. Если число, то
-// ошибка ввода. Если это строка то первый символ поставить в верхний регистр.
-// Убрать лишние пробелы
+
 // 7. На вход программе подаётся строка. Замените все @ на '!' с помощью
 // глобального поиска и замены (2 способа)
 // 8. Данастрока'aaabbbccc'.Вырежитеизнееслово'bbb'
